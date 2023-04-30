@@ -82,6 +82,7 @@ section .title::after{
 }
 /* navbar styling */
 .navbar{
+    background-color: #000000;
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -170,7 +171,7 @@ section .title::after{
 .home{
     display: flex;
     background-color: #000000;
-    height: 100vh;
+    height: 80vh;
     color: #fff;
     background-size: cover;
     /* background-attachment: fixed; */
@@ -180,28 +181,32 @@ section .title::after{
 .home .max-width{
   width: 100%;
   display: flex;
+  align-items: center;
 }
 .home .max-width .row{
   margin-right: 0;
 }
  .home-content {
     margin-top: 50px;
+    align-items: center;
 }
 .home .home-content .text-1{
-    font-size: 27px;
-}
-.home .home-content .text-2{
     font-size: 75px;
     font-weight: 600;
-    margin-left: -3px;
+}
+.home .home-content .text-2{
+    font-size: 40px;
+    
+    /* margin-left: -3px; */
 }
 .home .home-content .text-3{
-    font-size: 40px;
+    font-size: 35px;
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
     color: #0B6623;
     font-weight: 500;
+    text-align: center;
 }
 .home .home-content a{
     display: inline-block;
@@ -303,7 +308,7 @@ section .title::after{
     padding: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
-    height: 420px;
+    height: 450px;
     margin: 10px;
 }
 .services .serv-content .card .box.text{
