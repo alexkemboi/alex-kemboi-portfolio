@@ -79,14 +79,24 @@ $(document).ready(function () {
 
   // typing text animation script
   var typed = new Typed(".typing", {
-    strings: ["Fullstack Developer", "Designer", "Freelancer", "Mentor"],
+    strings: [
+      "Fullstack Website Developer",
+      "Community Champion",
+      "Freelancer",
+      "Mentor",
+    ],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
   });
 
   var typed = new Typed(".typing-2", {
-    strings: ["Fullstack Developer", "Designer", "Freelancer", "Mentor"],
+    strings: [
+      "Fullstack Website Developer",
+      "Community Champion",
+      "Freelancer",
+      "Mentor",
+    ],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
