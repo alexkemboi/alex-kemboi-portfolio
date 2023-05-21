@@ -153,7 +153,7 @@ request.onload = function () {
   var statusHTML = "";
   $.each(data, function (i, status) {
     if (status.description) {
-      statusHTML += `<div class="col-4" >
+      statusHTML += `<div class="col-md-4" >
                           <div class="card">
                               <div class="class-header">
                                 <img src="./images/portfolio2.jpg" class="card-img-top" alt="...">
