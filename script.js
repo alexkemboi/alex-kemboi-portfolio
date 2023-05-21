@@ -80,7 +80,7 @@ $(document).ready(function () {
   // typing text animation script
   var typed = new Typed(".typing", {
     strings: [
-      "Fullstack Website Developer",
+      "Fullstack Developer",
       "Community Champion",
       "Freelancer",
       "Mentor",
@@ -92,7 +92,7 @@ $(document).ready(function () {
 
   var typed = new Typed(".typing-2", {
     strings: [
-      "Fullstack Website Developer",
+      "Fullstack Developer",
       "Community Champion",
       "Freelancer",
       "Mentor",
