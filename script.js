@@ -126,6 +126,7 @@ $(document).ready(function () {
   });
 });
 
+//download cv function
 function downloadCV() {
   const link = document.createElement("a");
   link.href = "AlexKemboiResume120423.pdf";
@@ -134,3 +135,52 @@ function downloadCV() {
   link.click();
   document.body.removeChild(link);
 }
+
+//get repos from github
+function getUserRepos() {
+  const repos = fetch(`https://api.github.com/users/alexkemboi/repos`);
+  console.log(repos);
+  return repos;
+}
+
+getUserRepos();
+
+var request = new XMLHttpRequest();
+request.open("GET", "https://api.github.com/users/alexkemboi/repos", true);
+request.onload = function () {
+  var data = JSON.parse(this.response);
+  console.log(data);
+  var statusHTML = "";
+  $.each(data, function (i, status) {
+    if (status.description) {
+      statusHTML += `<div class="col-4" >
+                          <div class="card">
+                              <div class="class-header">
+                                <img src="./images/portfolio2.jpg" class="card-img-top" alt="...">
+                                <h3 class="card-title text-sm text-light">${
+                                  status.name.charAt(0).toUpperCase() +
+                                  status.name.slice(1)
+                                }</h3>
+                              </div>
+                            <div class="card-body">
+                                <p class="card-text text-sm text-light">Description:${
+                                  status.description
+                                }</p>                                
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                  <div class="col-12">
+                                      <button class="btn btn-block btn-success text-white">
+                                          Visit Site
+                                      </button>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>`;
+    }
+  });
+  $(".repositories").html(statusHTML);
+};
+
+request.send();
